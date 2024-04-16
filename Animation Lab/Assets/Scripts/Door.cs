@@ -5,7 +5,7 @@ using UnityEngine;
 public class Door : MonoBehaviour
 {
     // Fields
-
+    [SerializeField] Animator animator;
     // References
 
 
@@ -23,5 +23,6 @@ public class Door : MonoBehaviour
     {
         Debug.Log("Toggling door open/closed!");
         // TODO: This is where the door will play its open and close animation.
+        animator.SetTrigger("Interact");
     }
 }
